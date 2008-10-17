@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<componentPackage>
+    
+	<!-- Ply Containers -->
+	<component id="SkinnableComponent" class="com.ply.core.SkinnableComponent" />
+	<component id="ItemsComponent" class="com.ply.components.ItemsComponent" />
+	<component id="VBox" class="com.ply.containers.VBox" />
+	<component id="HBox" class="com.ply.containers.HBox" />
+	<!-- Core Flash Elements -->
+	<component id="Sprite" class="flash.display.Sprite" lookupOnly="true"/>
+	
+</componentPackage>
