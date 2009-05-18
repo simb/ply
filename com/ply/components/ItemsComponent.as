@@ -1,6 +1,7 @@
 package com.ply.components
 {
 	import com.ply.core.SkinnableComponent;
+	import com.ply.layouts.ILayout;
 	
 	import flash.display.DisplayObject;
 	
@@ -9,6 +10,8 @@ package com.ply.components
 	{
 		public var content:*;
 		public var gap:Number = 2;
+		public var layout:ILayout;
+		public var children:Array;
 		
 		public function ItemsComponent()
 		{

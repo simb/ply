@@ -54,6 +54,7 @@ package com.ply.core {
 		}
 		override public function set width(value:Number):void{
 			explicitWidth = value;
+		
 		}
 		override public function get width():Number
 		{
@@ -65,12 +66,7 @@ package com.ply.core {
 		}
 		override public function set height(value:Number):void{
 			explicitHeight = value;
-		}
-		
-		override public function addChild(child:DisplayObject):DisplayObject
-		{
-			trace('added :'+child.toString());
-			return super.addChild(child)
+			
 		}
 	}
 	

@@ -1,27 +1,19 @@
 package com.ply.containers
 {
 	import com.ply.components.ItemsComponent;
-	
-	import flash.display.DisplayObject;
+	import com.ply.layouts.VerticalLayout;
 
 	public class VBox extends ItemsComponent
 	{
 		public function VBox()
 		{
 			super();
+			layout = new VerticalLayout();
 		}
 		override protected function layoutChildren():void
 		{
 			super.layoutChildren();
-			var u:int = 0;
-			for (var i:int=0;i<numChildren;i++){
-				var item:DisplayObject = getChildAt(i);
-				item.y = u;
-				item.x = 0;
-				u += item.height + gap;	
-					preferedWidth = Math.max(preferedWidth,item.width);
-			}
-			preferedHeight = u;
+			layout.layout(this);
 			setSize();
 		}	
 	}
