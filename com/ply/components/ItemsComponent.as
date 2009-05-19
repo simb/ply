@@ -2,7 +2,6 @@ package com.ply.components
 {
 	import com.ply.core.SkinnableComponent;
 	import com.ply.layouts.ILayout;
-	
 	import flash.display.DisplayObject;
 	
 	[DefaultProperty("content")]
@@ -24,15 +23,21 @@ package com.ply.components
 			super.init();
 		}
 		
+		
 		override protected function layoutChildren():void
 		{
+			children = [];
 			if ( content is Array ) {
 				for ( var i:int=0;i<content.length;i++){
 					addChild(content[i] as DisplayObject );
 				}
-			}else{
+			}else if ( content != null ){
 				addChild(content as DisplayObject );
 			}
+		}
+		override public function addChild(child:DisplayObject):DisplayObject {
+			children.push(child);
+			return super.addChild(child);
 		}
 	
 	}
